@@ -1,10 +1,10 @@
 import questions from '../data/questions.json';
 import config from '../data/config.json';
 import types from '../data/types.json';
-import { countAnswers, getLevelsFromCounts } from './utils.js';
+import { countAnswers, getLevelsFromCounts, calculateSimilarity } from './utils.js';
 import { getResult } from './result.js';
 
-// 1. 直接声明 main.js 想要的函数名
+// 直接导出 main.js 想要的函数，完全匹配名称
 export function calcDimensionsScores(answers) {
   return countAnswers(answers, questions);
 }
@@ -18,19 +18,22 @@ export function determineResult(userLevels) {
   return getResult(userLevels, dimOrder, types);
 }
 
-// 2. 保持 solveQuiz 逻辑
+// 保持主引擎逻辑
 export function solveQuiz(answers) {
   const counts = calcDimensionsScores(answers);
   const userLevels = scoresToLevels(counts);
-  const result = determineResult(userLevels);
-  
   return {
-    result,
+    result: determineResult(userLevels),
     userLevels,
     dimOrder: config.dimensions || ['C', 'F', 'A', 'L'],
     dimDefs: config.dimDefs
   };
 }
 
-// 3. 导出数据
-export { questions, config, types };
+// 导出原始数据
+export const questionsData = questions;
+export const configData = config;
+export const typesData = types;
+
+// 为了防止 main.js 里还有 default import
+export default { solveQuiz, calcDimensionsScores, scoresToLevels, determineResult };
