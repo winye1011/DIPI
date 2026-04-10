@@ -1,114 +1,170 @@
-[
-  {
-    "code": "CFAL",
-    "name": "院里接班人",
-    "desc": "熬最深的夜，画最玄的方案。甲方提什么都说好，领导画什么饼都吃。你是设计院最后的理想主义遗迹，建议去博物馆挂个号。",
-    "keywords": ["年终奖幻觉", "汇报战神", "咖啡灌溉"],
-    "stats": { "liver": 95, "hair": 40, "logic": 80, "shijing": 20, "cake": 90 }
-  },
-  {
-    "code": "CFAR",
-    "name": "怀才不遇者",
-    "desc": "方案能力极强，经常为了“场所精神”跟甲方开撕。一边改图一边刷招聘软件，你的才华不该被埋没在施工图大样里。",
-    "keywords": ["甲方克星", "简历常更", "艺术追求"],
-    "stats": { "liver": 85, "hair": 50, "logic": 90, "shijing": 60, "cake": 10 }
-  },
-  {
-    "code": "CFEL",
-    "name": "全能绘图骡",
-    "desc": "方案和施工图全能，产值支柱。只要给电，能从早画到晚。你是领导最放心的“牛马”，但记得偶尔看看窗外的阳光。",
-    "keywords": ["产值机器", "CAD专家", "不眠之夜"],
-    "stats": { "liver": 99, "hair": 20, "logic": 70, "shijing": 10, "cake": 70 }
-  },
-  {
-    "code": "CFER",
-    "name": "随时猝死型",
-    "desc": "疯狂套图和改图，血管里流的是冰美式。性格极度暴躁，电脑稍微卡顿就想砸显示器。随时准备删库跑路。",
-    "keywords": ["暴躁老哥", "致命错误", "凌晨三点"],
-    "stats": { "liver": 90, "hair": 10, "logic": 60, "shijing": 5, "cake": 30 }
-  },
-  {
-    "code": "CSAL",
-    "name": "汇报大忽悠",
-    "desc": "PPT做得很精美，动视全靠吹。虽然方案一般，但汇报时能把路边摊说成市井烟火轴。深受领导器重，深谙生存之道。",
-    "keywords": ["宏大叙事", "PPT战神", "察言观色"],
-    "stats": { "liver": 70, "hair": 60, "logic": 40, "shijing": 30, "cake": 95 }
-  },
-  {
-    "code": "CSAR",
-    "name": "忧郁艺术家",
-    "desc": "凌晨三点发黑白朋友圈。讨厌改图，觉得甲方在践踏你的艺术生命。目前正在考虑转行做插画或自由职业。",
-    "keywords": ["文青遗风", "改图PTSD", "灵感至上"],
-    "stats": { "liver": 60, "hair": 70, "logic": 50, "shijing": 80, "cake": 20 }
-  },
-  {
-    "code": "CSEL",
-    "name": "卑微打工人",
-    "desc": "最稳的底座。甲方说挪10公分绝不挪5公分，只要给钱，熬夜无所谓。你是设计院里最沉默也最可靠的一环。",
-    "keywords": ["好的好的", "强条克星", "搬砖能手"],
-    "stats": { "liver": 90, "hair": 30, "logic": 50, "shijing": 15, "cake": 85 }
-  },
-  {
-    "code": "CSER",
-    "name": "高效搬砖工",
-    "desc": "快速套图，绝不反抗。工作只是攒钱工具，一旦攒够立马辞职。你是流水线上最高效的那颗螺丝钉。",
-    "keywords": ["套图之王", "到点断电", "积攒本金"],
-    "stats": { "liver": 80, "hair": 40, "logic": 40, "shijing": 20, "cake": 40 }
-  },
-  {
-    "code": "BFAL",
-    "name": "佛系主创",
-    "desc": "方案全靠灵感，坚决不熬夜。凭着老资格跟甲方周旋，其实早就不想干了，追求一种精神上的提前退休。",
-    "keywords": ["老资格", "灵感突发", "拒不加班"],
-    "stats": { "liver": 30, "hair": 80, "logic": 70, "shijing": 65, "cake": 50 }
-  },
-  {
-    "code": "BFAR",
-    "name": "人间清醒派",
-    "desc": "拒绝加班。甲方敢下班后发消息直接拉黑。认为设计院是一艘正在下沉的船，你已经准备好救生衣了。",
-    "keywords": ["反内卷先锋", "人间清醒", "边干边撤"],
-    "stats": { "liver": 20, "hair": 90, "logic": 85, "shijing": 85, "cake": 5 }
-  },
-  {
-    "code": "BFEL",
-    "name": "养生工程师",
-    "desc": "准点下班，保温杯里泡枸杞。只画熟练的活，绝不接新挑战。深谙“不出错即是成功”的至理名言。",
-    "keywords": ["枸杞续命", "拒绝挑战", "稳健第一"],
-    "stats": { "liver": 15, "hair": 95, "logic": 60, "shijing": 40, "cake": 60 }
-  },
-  {
-    "code": "BFER",
-    "name": "带薪入厕者",
-    "desc": "每天在厕所呆2小时。工作能拖就拖，下班绝不逗留。离职流程已经走到一半，心思全在副业上。",
-    "keywords": ["摸鱼达人", "厕所战神", "副业之光"],
-    "stats": { "liver": 10, "hair": 85, "logic": 30, "shijing": 75, "cake": 10 }
-  },
-  {
-    "code": "BSAL",
-    "name": "温顺老学究",
-    "desc": "态度好，但不加班。方案四平八稳，追求稳健。等退休的典型心态，虽然卑微但绝对不卷。",
-    "keywords": ["求稳派", "态度诚恳", "养老心态"],
-    "stats": { "liver": 40, "hair": 80, "logic": 55, "shijing": 45, "cake": 75 }
-  },
-  {
-    "code": "BSAR",
-    "name": "逃避型咸鱼",
-    "desc": "甲方一催就装死，领导一谈就点头。其实在工位上偷偷刷转行成功的经验贴。你的灵魂已经离开了图纸。",
-    "keywords": ["习惯装死", "精神离职", "被动应付"],
-    "stats": { "liver": 25, "hair": 75, "logic": 40, "shijing": 55, "cake": 20 }
-  },
-  {
-    "code": "BSEL",
-    "name": "扫地僧",
-    "desc": "到点走人，但交出来的图纸强条全过。虽然不出彩，但极为稳健，是院里应对检查的定海神针。",
-    "keywords": ["规范活字典", "零强条错误", "深不可测"],
-    "stats": { "liver": 20, "hair": 100, "logic": 95, "shijing": 30, "cake": 65 }
-  },
-  {
-    "code": "BSER",
-    "name": "纯粹混子",
-    "desc": "既不爱设计也不爱加班，甲方说啥是啥，完全不走心。正在积极物色家乡的体制内岗位，活着就行。",
-    "keywords": ["生存至上", "莫得感情", "考公预备队"],
-    "stats": { "liver": 5, "hair": 90, "logic": 20, "shijing": 50, "cake": 30 }
+# SBTI 人格测试
+
+> MBTI已经过时，SBTI来了。
+
+一个开源的娱乐性人格测试项目，基于 B站UP主 [@蛆肉儿串儿](https://space.bilibili.com/417038183) 的原创测试。
+
+## 在线体验
+
+👉 [点击开始测试](https://pingfanfan.github.io/SBTI/)
+
+## 特性
+
+- 🧠 **27种人格类型** — 25种标准类型 + 2种隐藏/兜底类型
+- 📊 **15个评估维度** — 自我、情感、态度、行动、社交五大模型
+- 🎯 **曼哈顿距离匹配** — 基于15维向量的科学匹配算法
+- 🍺 **隐藏彩蛋** — 酒鬼人格触发机制
+- 📱 **移动端优先** — 响应式设计，手机体验友好
+- 🔧 **易于定制** — 数据与代码分离，改 JSON 即可创建你自己的测试
+
+## 项目结构
+
+```
+├── data/                    # 测试数据（修改这里来定制）
+│   ├── questions.json       # 题目和选项
+│   ├── dimensions.json      # 15个维度定义
+│   ├── types.json           # 人格类型和匹配模式
+│   └── config.json          # 评分参数和显示配置
+├── src/                     # 源代码
+│   ├── engine.js            # 评分算法（纯函数）
+│   ├── quiz.js              # 答题流程控制
+│   ├── result.js            # 结果页渲染
+│   ├── chart.js             # 雷达图（Canvas API）
+│   ├── utils.js             # 工具函数
+│   ├── main.js              # 入口
+│   └── style.css            # 样式（CSS变量主题化）
+├── docs/
+│   └── analysis.md          # 数据分析报告
+└── index.html
+```
+
+## 快速开始
+
+```bash
+# 克隆项目
+git clone https://github.com/pingfanfan/SBTI.git
+cd SBTI
+
+# 安装依赖
+npm install
+
+# 启动开发服务器
+npm run dev
+
+# 构建生产版本
+npm run build
+```
+
+## 定制你自己的测试
+
+所有测试内容都在 `data/` 目录下，修改 JSON 文件即可定制，无需改动代码。
+
+### 修改题目
+
+编辑 `data/questions.json`，每道题的结构：
+
+```json
+{
+  "id": "q1",
+  "dim": "S1",
+  "text": "你的题目文字",
+  "options": [
+    { "label": "选项A", "value": 1 },
+    { "label": "选项B", "value": 2 },
+    { "label": "选项C", "value": 3 }
+  ]
+}
+```
+
+- `dim` 指定该题属于哪个维度
+- `value` 分值：1=低, 2=中, 3=高
+- 每个维度需要恰好2道题
+
+### 添加新人格类型
+
+编辑 `data/types.json`，在 `standard` 数组中添加：
+
+```json
+{
+  "code": "YOUR",
+  "pattern": "HHH-HMH-MHH-HHH-MHM",
+  "cn": "你的类型名",
+  "intro": "一句话简介",
+  "desc": "详细描述..."
+}
+```
+
+`pattern` 是15个字母的L/M/H组合（按维度顺序：S1-S3, E1-E3, A1-A3, Ac1-Ac3, So1-So3），用 `-` 分隔每个模型。
+
+### 调整评分参数
+
+编辑 `data/config.json`：
+
+```json
+{
+  "scoring": {
+    "levelThresholds": { "L": [2, 3], "M": [4, 4], "H": [5, 6] },
+    "fallbackThreshold": 60
   }
-]
+}
+```
+
+### 修改主题样式
+
+编辑 `src/style.css` 顶部的 CSS 变量：
+
+```css
+:root {
+  --bg: #f0f4f1;
+  --accent: #4c6752;
+  /* ... */
+}
+```
+
+## 评分算法
+
+1. **求和**：每维度2题分值相加（范围2-6）
+2. **分级**：≤3 → L（低），4 → M（中），≥5 → H（高）
+3. **向量化**：L=1, M=2, H=3，生成15维数值向量
+4. **匹配**：计算用户向量与每种类型的曼哈顿距离
+5. **排名**：距离升序 → 精准命中降序 → 相似度降序
+6. **特殊覆盖**：酒鬼彩蛋 > 正常匹配 > 傻乐者兜底（<60%）
+
+详见 [数据分析报告](docs/analysis.md)。
+
+## 部署
+
+### GitHub Pages（推荐）
+
+Fork 本项目后，在 Settings → Pages → Source 选择 GitHub Actions 即可自动部署。
+
+### Vercel / Netlify
+
+直接连接 GitHub 仓库，零配置自动识别 Vite 项目。
+
+### 手动部署
+
+```bash
+npm run build
+# 将 dist/ 目录部署到任何静态服务器
+```
+
+## 技术栈
+
+- [Vite](https://vitejs.dev/) — 构建工具
+- 原生 JavaScript — 无框架依赖
+- Canvas API — 雷达图渲染
+- CSS Custom Properties — 主题化
+
+## 致谢
+
+- 原创测试：B站UP主 [@蛆肉儿串儿](https://space.bilibili.com/417038183)（UID: 417038183）
+- 原版地址：[B站SBTI测试页面](https://www.bilibili.com/blackboard/era/VxiCX2CRqcqzPK9F.html)
+
+## 声明
+
+本测试仅供娱乐，请勿用于任何严肃场景。本项目为开源二创，如有侵权请联系删除。
+
+## License
+
+[MIT](LICENSE)
