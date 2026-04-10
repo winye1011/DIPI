@@ -23,11 +23,11 @@
     "fallbackThreshold": 60
   },
   "display": {
-    "title": "SBTI 人格测试",
-    "subtitle": "MBTI已经过时，SBTI来了。",
-    "author": "B站UP主@蛆肉儿串儿 原创",
-    "funNote": "本测试仅供娱乐，别拿它当诊断、面试、相亲、分手、招魂、算命或人生判决书。",
-    "funNoteSpecial": "本测试仅供娱乐。隐藏人格和傻乐兜底都属于作者故意埋的损招，请勿把它当成医学、心理学、相学、命理学或灵异学依据。"
+    "title": "DITI 人格测试",
+    "subtitle": "专属设计院牛马的DITI来了。",
+    "author": "栗子油lio 原创",
+    "funNote": "本测试仅供设计院人娱乐解压，请勿当作职业诊断、面试标准答案、甲方沟通指南、跳槽决策依据、年终奖预测、转行判决书，更不能用来算图审能不能过、能不能准时下班。",
+    "funNoteSpecial": "请勿将其视作规范依据、审图标准、跳槽指南、职业诊断或任何正式决策参考。"
   },
   "drinkGate": {
     "questionId": "drink_gate_q1",
