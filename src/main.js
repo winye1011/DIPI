@@ -9,9 +9,9 @@ async function loadJSON(path) {
 }
 
 async function init() {
-  const [questions, dimensions, types, config] = await Promise.all([
+  // 1. 加载所有数据
+  const [questions, types, config] = await Promise.all([
     loadJSON(new URL('../data/questions.json', import.meta.url).href),
-    loadJSON(new URL('../data/dimensions.json', import.meta.url).href),
     loadJSON(new URL('../data/types.json', import.meta.url).href),
     loadJSON(new URL('../data/config.json', import.meta.url).href),
   ])
@@ -23,30 +23,46 @@ async function init() {
   }
 
   function showPage(name) {
-    Object.values(pages).forEach((p) => p.classList.remove('active'))
-    pages[name].classList.add('active')
+    Object.values(pages).forEach((p) => {
+      if (p) p.classList.remove('active')
+    })
+    if (pages[name]) pages[name].classList.add('active')
     window.scrollTo(0, 0)
   }
 
-  function onQuizComplete(answers, isDrunk) {
-    const scores = Engine.calcDimensionsScores(answers, questions.main)
-    const levels = scoresToLevels(scores, config.scoring.levelThresholds)
-    const result = determineResult(levels, dimensions.order, types.standard, types.special, { isDrunk })
-    renderResult(result, levels, dimensions.order, dimensions.definitions, config)
+  // 2. 核心修正：统一调用 Engine 导出的方法
+  function onQuizComplete(answers) {
+    // 使用之前在 engine.js 里对齐过的别名函数
+    const scores = Engine.calcDimensionsScores(answers, questions)
+    const levels = Engine.scoresToLevels(scores, config)
+    
+    // 获取人格匹配结果
+    const dimOrder = config.dimensions || ['C', 'F', 'A', 'L']
+    const result = Engine.determineResult(levels, dimOrder, types)
+    
+    // 渲染结果页面
+    renderResult(result, levels, dimOrder, config.dimDefs, config)
     showPage('result')
   }
 
+  // 3. 启动测验
   const quiz = createQuiz(questions, config, onQuizComplete)
 
-  document.getElementById('btn-start').addEventListener('click', () => {
-    quiz.start()
-    showPage('quiz')
-  })
+  const btnStart = document.getElementById('btn-start')
+  if (btnStart) {
+    btnStart.addEventListener('click', () => {
+      quiz.start()
+      showPage('quiz')
+    })
+  }
 
-  document.getElementById('btn-restart').addEventListener('click', () => {
-    quiz.start()
-    showPage('quiz')
-  })
+  const btnRestart = document.getElementById('btn-restart')
+  if (btnRestart) {
+    btnRestart.addEventListener('click', () => {
+      quiz.start()
+      showPage('quiz')
+    })
+  }
 }
 
-init()
+init().catch(err => console.error("Init Error:", err))
