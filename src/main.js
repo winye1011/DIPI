@@ -1,4 +1,4 @@
-import { calcDimensionScores, scoresToLevels, determineResult } from './engine.js'
+import * as Engine from './engine.js'
 import { createQuiz } from './quiz.js'
 import { renderResult } from './result.js'
 import './style.css'
@@ -29,7 +29,7 @@ async function init() {
   }
 
   function onQuizComplete(answers, isDrunk) {
-    const scores = calcDimensionScores(answers, questions.main)
+    const scores = Engine.calcDimensionsScores(answers, questions.main)
     const levels = scoresToLevels(scores, config.scoring.levelThresholds)
     const result = determineResult(levels, dimensions.order, types.standard, types.special, { isDrunk })
     renderResult(result, levels, dimensions.order, dimensions.definitions, config)
