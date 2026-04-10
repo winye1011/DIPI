@@ -2,22 +2,21 @@ import { shuffle, insertAtRandom, insertAfter } from './utils.js';
 import questions from '../data/questions.json';
 
 /**
- * 核心函数：创建题目逻辑
- * 必须确保名称为 createQuiz，供 main.js 调用
+ * 核心导出：创建测验逻辑
  */
 export function createQuiz() {
-  // 这里是你的题目处理逻辑，例如洗牌
-  const shuffledQuestions = shuffle([...questions]);
+  // 这里做一个简单的洗牌，确保每次题目顺序不同
+  const quizQuestions = shuffle([...questions]);
   
-  // 返回 main.js 预期的结构
   return {
-    questions: shuffledQuestions,
-    total: shuffledQuestions.length
+    questions: quizQuestions,
+    currentIndex: 0,
+    total: quizQuestions.length
   };
 }
 
-// 如果 main.js 还需要其他东西，也可以在这里导出
+// 导出原始题目数据，防止 main.js 其他地方用到
 export { questions };
 
-// 保险起见，增加默认导出
+// 默认导出，作为最后的保险
 export default { createQuiz, questions };
