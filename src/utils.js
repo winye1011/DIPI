@@ -1,21 +1,17 @@
-// 计算相似度
-export function calculateSimilarity(userLevels, targetCode, dimOrder) {
+export const calculateSimilarity = (userLevels, targetCode, dimOrder) => {
   let score = 0;
   const targetArray = targetCode.split('');
   const levelMap = { 'H': 3, 'M': 2, 'L': 1 };
-  
   dimOrder.forEach((dim, index) => {
     const userLevel = userLevels[dim] || 'M';
     const targetLevel = targetArray[index] || 'M';
     const dist = Math.abs(levelMap[userLevel] - levelMap[targetLevel]);
     score += (2 - dist);
   });
-  
   return Math.max(0, Math.round((score / (dimOrder.length * 2)) * 100));
-}
+};
 
-// 统计各维度得分
-export function countAnswers(answers, questions) {
+export const countAnswers = (answers, questions) => {
   const counts = {};
   answers.forEach((ans, index) => {
     const q = questions[index];
@@ -25,10 +21,9 @@ export function countAnswers(answers, questions) {
     }
   });
   return counts;
-}
+};
 
-// 转换等级
-export function getLevelsFromCounts(counts, config) {
+export const getLevelsFromCounts = (counts, config) => {
   const levels = {};
   const dims = config.dimensions || ['C', 'F', 'A', 'L'];
   dims.forEach(dim => {
@@ -38,4 +33,4 @@ export function getLevelsFromCounts(counts, config) {
     else levels[dim] = 'M';
   });
   return levels;
-}
+};
