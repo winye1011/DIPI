@@ -1,9 +1,34 @@
-{
-  "dimensions": ["C", "F", "A", "L"], 
-  "dimDefs": {
-    "C": { "name": "精力分配", "levels": { "L": "养生补觉派", "M": "适度续命", "H": "咖啡灌溉型" } },
-    "F": { "name": "甲方策略", "levels": { "L": "卑微顺从派", "M": "见机行事", "H": "据理对线型" } },
-    "A": { "name": "产出偏好", "levels": { "L": "搬砖工程派", "M": "均衡输出", "H": "理想方案型" } },
-    "L": { "name": "职业心态", "levels": { "L": "随时准备跑", "M": "静观其变", "H": "院长接班人" } }
+import { calculateSimilarity } from './utils.js'
+
+/**
+ * 获取测试结果
+ */
+export function getResult(userLevels, dimOrder, types) {
+  const userCode = dimOrder.map(dim => userLevels[dim] || 'M').join('')
+  
+  // 计算所有类型的匹配度
+  const rankings = types.map(type => {
+    const similarity = calculateSimilarity(userLevels, type.code, dimOrder)
+    return {
+      ...type,
+      similarity
+    }
+  }).sort((a, b) => b.similarity - a.similarity)
+
+  // 获取最匹配的主类型
+  const primary = rankings[0]
+  
+  return {
+    primary,
+    secondary: rankings[1],
+    rankings,
+    mode: 'normal'
   }
+}
+
+/**
+ * 这里的逻辑已经被简化，确保不会因为找不到 drinkGate 而报错
+ */
+export function getResultMode(answers, config) {
+  return 'normal'
 }
