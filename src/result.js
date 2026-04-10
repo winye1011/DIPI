@@ -1,19 +1,19 @@
 import { calculateSimilarity } from './utils.js';
 
-export const getResult = (userLevels, dimOrder, types) => {
-  const rankings = types.map(type => {
-    const similarity = calculateSimilarity(userLevels, type.code, dimOrder);
-    return { ...type, similarity };
+export function getResult(userLevels, dimOrder, types) {
+  const rankings = types.map(t => {
+    const sim = calculateSimilarity(userLevels, t.code, dimOrder);
+    return Object.assign({}, t, { similarity: sim });
   }).sort((a, b) => b.similarity - a.similarity);
 
   return {
     primary: rankings[0],
     secondary: rankings[1],
-    rankings,
+    rankings: rankings,
     mode: 'normal'
   };
-};
+}
 
-export const getResultMode = () => {
+export function getResultMode() {
   return 'normal';
-};
+}
