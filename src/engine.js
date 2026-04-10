@@ -4,27 +4,33 @@ import types from '../data/types.json';
 import { countAnswers, getLevelsFromCounts } from './utils.js';
 import { getResult } from './result.js';
 
-// 直接定义 main.js 想要的这三个函数名
-export const calcDimensionsScores = countAnswers;
-export const scoresToLevels = getLevelsFromCounts;
-export const determineResult = getResult;
+// 1. 直接声明 main.js 想要的函数名
+export function calcDimensionsScores(answers) {
+  return countAnswers(answers, questions);
+}
 
-/**
- * 核心引擎：处理完整逻辑
- */
-export function solveQuiz(answers) {
-  const counts = calcDimensionsScores(answers, questions);
-  const userLevels = scoresToLevels(counts, config);
+export function scoresToLevels(counts) {
+  return getLevelsFromCounts(counts, config);
+}
+
+export function determineResult(userLevels) {
   const dimOrder = config.dimensions || ['C', 'F', 'A', 'L'];
-  const result = determineResult(userLevels, dimOrder, types);
+  return getResult(userLevels, dimOrder, types);
+}
+
+// 2. 保持 solveQuiz 逻辑
+export function solveQuiz(answers) {
+  const counts = calcDimensionsScores(answers);
+  const userLevels = scoresToLevels(counts);
+  const result = determineResult(userLevels);
   
   return {
     result,
     userLevels,
-    dimOrder,
+    dimOrder: config.dimensions || ['C', 'F', 'A', 'L'],
     dimDefs: config.dimDefs
   };
 }
 
-// 导出数据
+// 3. 导出数据
 export { questions, config, types };
